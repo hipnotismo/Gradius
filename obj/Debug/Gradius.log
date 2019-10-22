@@ -1,8 +1,7 @@
-﻿  credits.cpp
-  game.cpp
+﻿  game.cpp
   gameplay.cpp
-  init_player.cpp
+  init_enemy.cpp
   main.cpp
   menu.cpp
   Generando código...
-  Gradius.vcxproj -> C:\Users\Administrador\Desktop\Gradius\bin\Debug\Gradius.exe
+  Gradius.vcxproj -> C:\Users\Iker\Desktop\Gradius\bin\Debug\Gradius.exe
