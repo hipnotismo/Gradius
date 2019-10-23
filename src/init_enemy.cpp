@@ -16,6 +16,22 @@ Enemy::~Enemy()
 {
 
 }
+void Enemy::setX(float x)
+{
+	_x = x;
+}
+float Enemy::getX()
+{
+	return _x;
+}
+void Enemy::setY(float y)
+{
+	_y = y;
+}
+float Enemy::getY()
+{
+	return _y;
+}
 void Enemy::setState(bool state)
 {
 	_state = state;
@@ -35,7 +51,6 @@ void Enemy::initEnemy()
 void Enemy::movement()
 {
 		_x -= _speedX * GetFrameTime();
-		_y -= _speedY * GetFrameTime();
 		if (_y <= limitNegY)
 			_speedY *= -1.0f;
 		else if (_y >= limitPosY)

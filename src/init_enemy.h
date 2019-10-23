@@ -16,6 +16,10 @@ public:
 	Rectangle _enemy;
 	Enemy(float x, float y, float width, float height, float speedX, float speedY, bool state);
 	~Enemy();
+	void setX(float x);
+	float getX();
+	void setY(float y);
+	float getY();
 	void setState(bool state);
 	bool getState();
 	void initEnemy();
