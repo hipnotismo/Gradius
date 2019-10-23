@@ -17,6 +17,10 @@ public:
 	Rectangle _player;
 	Player(float x, float y, float width, float height, int lives, int ammo, float speedX, float speedY, bool state);
 	~Player();
+	void setX(float x);
+	float getX();
+	void setY(float y);
+	float getY();
 	void setLives(int lives);
 	int getLives();
 	void setAmmo(int ammo);

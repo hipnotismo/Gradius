@@ -17,6 +17,22 @@ Player::~Player()
 	DrawText("You're Dead", 640, 360, 60, GREEN);
 	EndDrawing();
 }
+void Player::setX(float x)
+{
+	_x = x;
+}
+float Player::getX()
+{
+	return _x;
+}
+void Player::setY(float y)
+{
+	_y = y;
+}
+float Player::getY()
+{
+	return _y;
+}
 void Player::setLives(int lives)
 {
 	_lives = lives;

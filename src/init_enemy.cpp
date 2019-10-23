@@ -46,7 +46,7 @@ void Enemy::initEnemy()
 	_enemy.y = _y;
 	_enemy.width = _width;
 	_enemy.height = _height;
-	DrawRectangleRec(_enemy, DARKBLUE);
+	DrawRectangleRec(_enemy, MAROON);
 }
 void Enemy::movement()
 {
