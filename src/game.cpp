@@ -1,4 +1,5 @@
 #include "game.h"
+#include "menu.h"
 
 GameState state;
 
@@ -16,10 +17,12 @@ void game::deInit()
 }
 void game::update()
 {
-	state = gameplay;
+	
 	switch (state)
 	{
 	case mainMenu:
+		menu::updateMenu();
+		menu::drawMenu();
 		break;
 	case controls:
 		break;
