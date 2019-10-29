@@ -5,7 +5,7 @@ static Rectangle menu1;
 static Rectangle menu2;
 Rectangle menuSel;
 Vector2 menuChoice;
-static float radius = 5.0f;
+static float radiusMenu = 5.0f;
 static float menu2Pos = 425.0f;
 static float menu1Pos = 325.0f;
 static Color menuColor;
@@ -68,7 +68,7 @@ void menu::drawMenu()
 	DrawRectangleRec(menuSel, BLUE);
 #endif // COLLISION_BOX
 	if (menuChoice.y == 325.0f || menuChoice.y==425.0f)
-		DrawCircleV(menuChoice, radius, YELLOW);
+	DrawCircleV(menuChoice, radiusMenu, YELLOW);
 	DrawText("GRADIUS", 550, 100, 50, MAROON);
 	DrawText("Play", 600, 300, 50, menuColor);
 	DrawText("Credits", 560, 400, 50, creditsColor);

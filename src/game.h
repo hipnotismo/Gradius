@@ -10,6 +10,8 @@ enum GameState
 	Credits
 };
 extern GameState state;
+extern const int screenWidth;
+extern const int screenHeight;
 namespace game 
 {
 void init();

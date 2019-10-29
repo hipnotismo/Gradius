@@ -15,6 +15,7 @@ private:
 	bool _state;
 public:
 	Rectangle _player;
+	Player();
 	Player(float x, float y, float width, float height, int lives, int ammo, float speedX, float speedY, bool state);
 	~Player();
 	void setX(float x);

@@ -1,11 +1,14 @@
 #include "game.h"
 #include "menu.h"
+#include "credits.h"
 
 GameState state;
+const int screenWidth = 1280;
+const int screenHeight = 720;
 
 void game::init()
 {
-	InitWindow(1280, 720, "Gradius V0.1");
+	InitWindow(screenWidth, screenHeight, "Gradius V0.1");
 }
 void game::draw()
 {
@@ -35,6 +38,8 @@ void game::update()
 	case gameOver:
 		break;
 	case Credits:
+		cred::updateCredits();
+		cred::drawCredits();
 		break;
 	}
 }

@@ -1,4 +1,16 @@
 #include "init_player.h"
+Player::Player()
+{
+	_x = 0.0f;
+	_y = 0.0f;
+	_width = 0.0f;
+	_height = 0.0f;
+	_lives = 0;
+	_ammo = 0;
+	_speedX = 0.0f;
+	_speedY = 0.0f;
+	_state = false;
+}
 Player::Player(float x, float y, float width, float height, int lives, int ammo, float speedX, float speedY, bool state)
 {
 	_x = x;
