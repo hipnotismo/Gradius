@@ -1,6 +1,7 @@
 #ifndef GAMEPLAY_H
 #define GAMEPLAY_H
 #include "init_enemy.h"
+#include "init_enemy2.h"
 #include "init_player.h"
 #include "init_bullet.h"
 void initElements();

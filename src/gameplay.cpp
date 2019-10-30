@@ -4,13 +4,15 @@
 
 static int lives = 3;
 static const int ammo = 100;
-static const int enemies = 3;
+static const int enemies = 4;
+//static const int enemies2 = 2;
 static int currentAmmo = 0;
 static const int startAmmo = 100;
 static int winCount = 0;
 
 Player* player = new Player(50.0f, 360.0f, 50.0f, 50.0f, lives, startAmmo,800.0f, 700.0f, true);
-Enemy* enemy[3];
+Enemy* enemy[4];
+//Enemy2* enemy2[2];
 Bullet* bullets[100];
 
 static int newAmmo = player->getAmmo();
@@ -28,6 +30,10 @@ void initElements()
 	enemy[0] = new Enemy(1400.0f, 360.0f, 20.0f, 20.0f, 300.0f, 300.0f, true);
 	enemy[1] = new Enemy(2000.0f, 100.0f, 20.0f, 20.0f, 300.0f, 300.0f, true);
 	enemy[2] = new Enemy(3000.0f, 600.0f, 20.0f, 20.0f, 300.0f, 300.0f, true);
+	enemy[3] = new Enemy(2500.0f, 620.0f, 50.0f, 50.0f, 300.0f, 300.0f, true);
+	
+	//enemy2[0] = new Enemy2(1400.0f, static_cast<float>(GetScreenHeight()), 40.0f, 40.0f, 300.0f, 300.0f, true);
+
 	for (int i = 0; i < ammo; i++)
 	{
 		bullets[i] = new Bullet(player->getX(),player->getY(), 1500.0f);
@@ -60,6 +66,12 @@ void setCollisions()
 			delete bullets[i];
 			winCount++;
 		}
+		/*if (CheckCollisionCircleRec(bullets[i]->ball, radius, enemy2[j]->_enemy))
+		{
+			delete enemy2[j];
+			delete bullets[i];
+			winCount++;
+		}*/
 	}
 	for (int i = 0; i < ammo; i++)
 	{
@@ -78,6 +90,11 @@ void setRules()
 		if (enemy[i]->getX() <= -100.0f)
 			enemy[i]->setX(1300.0f);
 	}
+	/*for (int i = 0; i < enemies2; i++)
+	{
+		if (enemy2[i]->getX2() <= -100.0f)
+			enemy2[i]->setX2(1300.0f);
+	}*/
 	if (player->getLives() <= 0)
 	{
 		player->setState(false);
@@ -101,6 +118,10 @@ void updateGameplay()
 	{
 		enemy[i]->movement();
 	}
+	/*for (int i = 0; i < enemies; i++)
+	{
+		enemy2[i]->movement2();
+	}*/
 	if (IsKeyPressed(KEY_SPACE) && bullets[currentAmmo]  != NULL)
 	{
 		bullets[currentAmmo]->setY(player->getY()+25.0f);
@@ -122,10 +143,14 @@ void drawGameplay()
 	BeginDrawing();
 	ClearBackground(BLACK);
 	player->setPlayer();
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 4; i++)
 	{
 		enemy[i]->initEnemy();
 	}
+	/*for (int i = 0; i < 3; i++)
+	{
+		enemy2[i]->initEnemy2();
+	}*/
 	for (int i = 0; i < ammo; i++)
 	{
 		if (bullets[i]->shooted == true)

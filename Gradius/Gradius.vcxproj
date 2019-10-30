@@ -140,6 +140,7 @@
     <ClCompile Include="..\src\gameplay.cpp" />
     <ClCompile Include="..\src\init_bullet.cpp" />
     <ClCompile Include="..\src\init_enemy.cpp" />
+    <ClCompile Include="..\src\init_enemy2.cpp" />
     <ClCompile Include="..\src\init_player.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\menu.cpp" />
@@ -150,6 +151,7 @@
     <ClInclude Include="..\src\gameplay.h" />
     <ClInclude Include="..\src\init_bullet.h" />
     <ClInclude Include="..\src\init_enemy.h" />
+    <ClInclude Include="..\src\init_enemy2.h" />
     <ClInclude Include="..\src\init_player.h" />
     <ClInclude Include="..\src\menu.h" />
   </ItemGroup>
